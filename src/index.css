@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Mulish&display=swap');
+
+*,*:link,*:visited{margin: 0px; padding: 0; box-sizing: border-box;}
+
+html{font-size: 62.5%;}
+
+body{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 17px;
+  color: #828282;
+}
+
+input,button{all: unset; font-family: 'Mulish', sans-serif; font-weight: 400; line-height: 17.5px; color: #333333; }
+::placeholder{font-family: 'Mulish', sans-serif; font-weight: 400; line-height: 17.5px; color: #BDBDBD; }
+
+
+.navigation{display: flex; margin: 50px 96px 67px;align-items: center;}
+.navigation .logo{margin-right: auto;}
+.navigation .logo .img{width: 100px;}
+.navigation .searchbar{
+  display: flex; 
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1); border-radius: 16px;
+  width: 300px;
+}
+.navigation .searchbar .city{padding: 19px 16px; width: 93px; box-sizing: content-box;}
+.navigation .searchbar .guests{padding: 19px 16px; border-left: 1px solid #F2F2F2; border-right: 1px solid #F2F2F2; width: 93px;}
+.navigation .searchbar div {display: flex; align-items: center; justify-content: center; margin: 0 auto;}
+
+
+.navigationActive{height: 100vh; width: 100vw; background-color: rgba(79, 79, 79, 0.4); position: fixed; top: 0;}
+.navigationActive form{display: flex; background-color: white; padding: 93px 97px 42px; justify-content: space-between; align-items: center;}
+.navigationActive .inputContainer{flex-basis: 40%; border: 1px solid #333333; border-radius: 16px; display: flex; flex-direction: column; padding: 12px 27px;}
+.navigationActive .inputContainer label{text-transform: uppercase; color: #333333; margin-bottom: 4px; font-size: 9px; line-height: 11px; font-weight: 800;}
+.navigationActive .buttonContainer{}
+.navigationActive .buttonContainer button{background-color: #EB5757; padding: 19px 27px; display: flex; justify-content: center; align-items: center; gap: 10px; font-size: 14px; font-weight: 700; color: #F2F2F2; border-radius: 26px; }
