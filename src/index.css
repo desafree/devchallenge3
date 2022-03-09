@@ -29,9 +29,163 @@ input,button{all: unset; font-family: 'Mulish', sans-serif; font-weight: 400; li
 .navigation .searchbar div {display: flex; align-items: center; justify-content: center; margin: 0 auto;}
 
 
-.navigationActive{height: 100vh; width: 100vw; background-color: rgba(79, 79, 79, 0.4); position: fixed; top: 0;}
-.navigationActive form{display: flex; background-color: white; padding: 93px 97px 42px; justify-content: space-between; align-items: center;}
-.navigationActive .inputContainer{flex-basis: 40%; border: 1px solid #333333; border-radius: 16px; display: flex; flex-direction: column; padding: 12px 27px;}
+/* .navigationActive{height: 100vh; width: 100vw; background-color: rgba(79, 79, 79, 0.4); position: fixed; top: 0; display: none;}
+.navigationActive form{display: flex; background-color: white; padding: 93px 97px 42px; justify-content: space-between; align-items: center;} */
+/* .navigationActive .inputContainer{flex-basis: 40%; border: 1px solid #333333; border-radius: 16px; display: flex; flex-direction: column; padding: 12px 27px; position: relative;}
 .navigationActive .inputContainer label{text-transform: uppercase; color: #333333; margin-bottom: 4px; font-size: 9px; line-height: 11px; font-weight: 800;}
 .navigationActive .buttonContainer{}
-.navigationActive .buttonContainer button{background-color: #EB5757; padding: 19px 27px; display: flex; justify-content: center; align-items: center; gap: 10px; font-size: 14px; font-weight: 700; color: #F2F2F2; border-radius: 26px; }
+.navigationActive .buttonContainer button{background-color: #EB5757; padding: 19px 27px; display: flex; justify-content: center; align-items: center; gap: 10px; font-size: 14px; font-weight: 700; color: #F2F2F2; border-radius: 26px; } */
+
+/* .suggestion{position: absolute; top: 84px; left: 10px;}
+.suggestion p{margin-bottom: 30px; display: flex; align-items: center;} */
+
+.content{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(400px, 1fr));
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+  padding: 83px 94px;
+}
+
+.content .apartment-container{}
+.content .apartment-container .img-content{max-width: 395px; max-height: 270px; overflow: hidden; border-radius: 24px;}
+.content .apartment-container .img-content img{width: 100%;}
+.content .apartment-container .prova{ display: flex; align-items: center; justify-content: space-between;}
+.content .apartment-container .prova h4{
+  text-transform: uppercase;
+  padding: 7px 9px;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #4F4F4F;
+  border-radius: 12px;
+  border: 1px solid #4F4F4F;
+  margin-right: 11px;
+
+
+}
+.content .apartment-container .prova p{}
+.content .apartment-container .prova h5{}
+.content .apartment-container p{}
+
+
+.content{}
+.content .apartment{display: flex; flex-direction: column; justify-content: space-between; gap: 10px; max-width: 395px;}
+.content .apartment .imgContainer{border-radius: 25px; overflow: hidden; max-width: 395px; max-height: 270px;}
+.content .apartment .imgContainer img{width: 100%;}
+.content .apartment h4{  text-transform: uppercase;
+  padding: 7px 9px;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #4F4F4F;
+  border-radius: 12px;
+  border: 1px solid #4F4F4F;
+  margin-right: 11px;}
+.content .apartment .first-row{ display: flex; align-items: center; justify-content: space-between;}
+.content .apartment .first-row p{}
+.content .apartment p{}
+.rating{display: flex; align-items: center; gap: 7px;margin-right: 5px;}
+.title{font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0em;
+  color: #333333;  
+}
+
+.inputBar{}
+.inputBar form{ display: flex;  align-items: flex-start; gap: 10px;}
+.inputBar .input-container{display: flex; flex-direction: column; gap: 40px;}
+.inputBar .input-container .inputBox{width: 425px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 25px;
+  border: 1px solid #333333;
+  }
+.inputBar .input-container .inputBox label{font-family: Mulish;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 11px;
+  letter-spacing: 0em;
+  text-align: left;
+  }
+.inputBar .input-container .inputBox .city{}
+.inputBar .input-container .suggestion p{font-family: Mulish;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding-left: 10px;
+  margin-bottom: 36px;
+  color: #4F4F4F;
+  display: flex;
+  align-items: center;
+  }
+.inputBar .input-container .inputBox .number{}
+.inputBar .input-container .inputBox .button-number{}
+.inputBar .input-container .inputBox .button-number h4{font-family: Mulish;
+  font-family: Mulish;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  }
+.inputBar .input-container .inputBox .button-number p{  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  }
+
+.button-number{display: flex; flex-direction: column; gap: 10px;}
+.button-box{margin-bottom: 50px; display: flex; gap: 15px; align-items: center;}
+.button-box button{ padding: 7px 11px; border: 1px solid #828282; border-radius: 4px;}
+.inputBar .input-container .inputBox .button-number .button-box button{}
+.search{
+  border-radius: 16px;
+  padding: 10px 27px;
+  background-color: #EB5757;
+  font-family: Mulish;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: 18px;
+letter-spacing: 0em;
+text-align: left;
+color: white;
+height: 48px;
+box-sizing: border-box;
+display: flex;
+align-items: center;
+  }
+
+
+
+@media only screen and (max-width: 600px) {
+  .content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+    padding: 83px 94px;
+  }
+}
