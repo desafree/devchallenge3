@@ -16,7 +16,7 @@ input,button{all: unset; font-family: 'Mulish', sans-serif; font-weight: 400; li
 ::placeholder{font-family: 'Mulish', sans-serif; font-weight: 400; line-height: 17.5px; color: #BDBDBD; }
 
 
-.navigation{display: flex; margin: 50px 96px 67px;align-items: center;}
+/* .navigation{display: flex; margin: 50px 96px 67px;align-items: center;} */
 .navigation .logo{margin-right: auto;}
 .navigation .logo .img{width: 100px;}
 .navigation .searchbar{
@@ -104,8 +104,8 @@ input,button{all: unset; font-family: 'Mulish', sans-serif; font-weight: 400; li
   color: #333333;  
 }
 
-.inputBar{}
-.inputBar form{ display: flex;  align-items: flex-start; gap: 10px;}
+.inputBar{position: fixed; top: 0; left: 0; background-color: rgba(0, 0, 0, 0.226); height: 100vh; width: 100vw;}
+.inputBar form{ display: flex;  align-items: flex-start; gap: 10px; padding: 93px 96px 0;background-color: white;}
 .inputBar .input-container{display: flex; flex-direction: column; gap: 40px;}
 .inputBar .input-container .inputBox{width: 425px;
   border-radius: 16px;
@@ -136,6 +136,8 @@ input,button{all: unset; font-family: 'Mulish', sans-serif; font-weight: 400; li
   display: flex;
   align-items: center;
   }
+
+  .inputBar .input-container .suggestion button{display: block;}
 .inputBar .input-container .inputBox .number{}
 .inputBar .input-container .inputBox .button-number{}
 .inputBar .input-container .inputBox .button-number h4{font-family: Mulish;
@@ -175,8 +177,51 @@ height: 48px;
 box-sizing: border-box;
 display: flex;
 align-items: center;
-  }
 
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.button-number{display: none;}
+.input-container:focus-within .button-number{display: block;}
+.suggestion{display: none;}
+.input-container.input-prova:focus-within .suggestion{display: block;}
+
+.navbarr{display: flex; justify-content: space-between; align-items: center; padding: 46px 94px 0px; height: 100px;}
+
+.navbarr img{}
+.navbarr .navigation{ display: flex; width: 300px; background: #FFFFFF;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+justify-content: space-between;
+padding: 17px 19px;}
+.navbarr .navigation .city{font-family: Mulish;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  }
+.navbarr .navigation .guests{border-left: 1px solid #F2F2F2; font-family: Mulish;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  }
+.navbarr .navigation .logoo{border-left: 1px solid #F2F2F2; display: flex; align-items: center; justify-content: center;}
+.navbarr .navigation .logoo svg{margin-left: 16px;}
 
 
 @media only screen and (max-width: 600px) {
@@ -186,6 +231,26 @@ align-items: center;
     gap: 32px;
     justify-content: center;
     align-items: center;
-    padding: 83px 94px;
+    padding: 83px 50px;
+
+    
   }
+
+  .inputBar form{flex-direction: column; padding: 93px 10px 20px; justify-content: center;}
+
+  .inputBar .input-container{width: 100%;}
+  .inputBar .input-container .inputBox{width: 100%;}
+
+  .navbarr{padding: 46px 15px 0px;}
+  .navbarr .navigation{padding: 10px 19px; width: 200px; }
+  .navbarr .navigation .city{font-size: 11px;}
+  .navbarr .navigation .guests{font-size: 11px;}
+}
+
+@media only screen and (max-width: 1100px) {
+  .inputBar form{flex-direction: column; padding: 93px 10px 20px; justify-content: center;}
+
+  .inputBar .input-container{width: 100%;}
+  .inputBar .input-container .inputBox{width: 100%;}
+  .content{grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));}
 }
